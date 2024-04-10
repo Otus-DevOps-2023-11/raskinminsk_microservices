@@ -53,6 +53,7 @@ branch review:
 staging:
   stage: stage
   when: manual
+  # app version
   only:
     - /^\d+\.\d+\.\d+/
   script:
@@ -64,6 +65,7 @@ staging:
 production:
   stage: production
   when: manual
+  # app version
   only:
     - /^\d+\.\d+\.\d+/
   script:
