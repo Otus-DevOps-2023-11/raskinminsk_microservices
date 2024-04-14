@@ -1,0 +1,20 @@
+version: '3.6'
+services:
+  gitlab:
+    container_name: gitlab
+    # runner registration token has been deprecated in GitLab Runner 15.6
+    image: 'gitlab/gitlab-ce:15.5.0-ce.0'
+    restart: always
+    hostname: 'gitlab.example.com'
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url 'http://158.160.118.80'
+        # Add any other gitlab.rb configuration here, each on its own line
+    ports:
+      - '80:80'
+      - '443:443'
+      - '2222:22'
+    volumes:
+      - '/srv/gitlab/config:/etc/gitlab'
+      - '/srv/gitlab/logs:/var/log/gitlab'
+      - '/srv/gitlab/data:/var/opt/gitlab'
