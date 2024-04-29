@@ -40,3 +40,9 @@ raskinminsk microservices repository
 # Добавление окружения и проверка dev.
 # Добавление этапов stage и production, их окружения и условий, проверка.
 # Добавление динамического окружения и проверка.
+
+#HW  monitoring-1
+Prometheus: запуск, конфигурация, знакомство с Web UI
+Мониторинг состояния микросервисов
+Сбор метрик хоста с использованием экспортера
+Репозиторий DockerHUB:https://hub.docker.com/repositories/raskinminsk
