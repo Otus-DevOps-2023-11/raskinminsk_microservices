@@ -1,10 +1,11 @@
 FROM ruby:2.7
+
 RUN apt-get update -qq && apt-get install -y build-essential
 
 ENV APP_HOME /app
 WORKDIR $APP_HOME
-
 ADD . $APP_HOME/
+
 RUN bundle update --bundler && bundle install
 
 ENV POST_SERVICE_HOST post

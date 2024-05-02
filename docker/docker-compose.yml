@@ -15,7 +15,7 @@ services:
     env_file:
       - .env
     # build: ./ui
-    image: ${USERNAME}/ui:${UI_VER}
+    image: bbks/ui:${UI_VER}
     environment:
       - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
     ports:
@@ -32,7 +32,7 @@ services:
     env_file:
       - .env
     # build: ./post-py
-    image: ${USERNAME}/post:${POST_VER}
+    image: bbks/post:${POST_VER}
     environment:
       - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
     logging:
