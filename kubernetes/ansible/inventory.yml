@@ -1,0 +1,21 @@
+kubeadm:
+  children:
+    kubeadm_control_plane:
+      hosts:
+        kubeadm-cp-01:
+          ansible_host: 178.154.222.60
+#        kubeadm-cp-02:
+#          ansible_host: 10.0.70.78
+#        kubeadm-cp-03:
+#          ansible_host: 10.0.70.79
+    kubeadm_nodes:
+      hosts:
+        kubeadm-node-01:
+          ansible_host: 158.160.104.151
+#        kubeadm-node-02:
+#          ansible_host: 10.0.70.77
+#        kubeadm-node-03:
+#          ansible_host: 10.0.70.74
+  vars:
+    ansible_user: raskin
+    ansible_port: 22
