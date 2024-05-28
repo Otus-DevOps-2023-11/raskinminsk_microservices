@@ -53,3 +53,19 @@ Prometheus: запуск, конфигурация, знакомство с Web 
 Визуализация логов
 Сбор структурированных логов
 Распределенная трасировка
+
+# HW kubernetes-2
+Локально установлены kubectl и minikube
+Создан minikube кластер
+Созданы манифесты deployment сервисов ui, comment, post и mongodb
+Созданы манифесты service сервисов ui, comment, post, mongodb
+Созданы сервисы comment-mongodb-service и post-mongodb-service
+Приложения запущены в нэймспэйсе dev
+В Яндекс Облаке создан кластер в Managed Service for Kubernetes
+Добавлены учетные данные кластера Kubernetes в конфигурационный файл kubectl:
+ $ yc managed-kubernetes cluster get-credentials --id cat2sjuvk5cvjhg7e6ko --external
+ $ kubectl config current-context
+Созданые манифесты применены к созданному в ЯО кластеру
+Приложение доступно по адресу 
+ http://158.160.101.85:30464
+ http://178.154.201.108:30464
