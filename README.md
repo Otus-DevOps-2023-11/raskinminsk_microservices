@@ -69,3 +69,11 @@ Prometheus: запуск, конфигурация, знакомство с Web 
 Приложение доступно по адресу 
  http://158.160.101.85:30464
  http://178.154.201.108:30464
+
+# HW kubernetes-3
+Создан LoadBalancer для сервиса ui
+Создан nginx Ingress controller и настроен доступ к сервису ui через nginx ingress controller
+Создан TLS сертификат, добавлен в секреты кластера
+Настроена политика сети
+Создан volume для хранения базы mongodb
+Создан persistentVolumeClaim и добавлен в манифест mongodb
