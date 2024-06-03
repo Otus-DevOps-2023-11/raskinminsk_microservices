@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: PersistentVolume
+# Создание PV в Yandex Cloud
+metadata:
+  name: mongo-pv
+spec:
+  capacity:
+    storage: 4Gi
+  accessModes:
+    - ReadWriteOnce
+  csi:
+    driver: disk-csi-driver.mks.ycloud.io
+    fsType: ext4
+    volumeHandle: fhm5jj0s0i5vjhopet3a
